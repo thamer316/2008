@@ -229,6 +229,19 @@
             transform: translateY(-2px);
         }
 
+        .average-card {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .average-card .result-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .average-card .result-value {
+            color: white;
+        }
+
         .result-label {
             font-size: 0.9rem;
             color: #666;
@@ -240,6 +253,8 @@
             font-weight: bold;
             color: #663399;
         }
+
+
 
         .footer-logo {
             text-align: center;
@@ -364,10 +379,15 @@
                         <div class="result-value" id="total">-</div>
                         <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">من 300</div>
                     </div>
-                    <div class="result-card">
+                    <div class="result-card average-card">
                         <div class="result-label">المعدل</div>
                         <div class="result-value" id="average">-</div>
-                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">من 30</div>
+                        <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.8); margin-top: 5px;">من 30</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">النسبة المئوية</div>
+                        <div class="result-value" id="percentage">-</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">%</div>
                     </div>
                 </div>
             </div>
@@ -398,10 +418,14 @@
             
             // المعدل من 30 (المجموع ÷ 10)
             const average = actualTotal / 10;
+            
+            // النسبة المئوية (المعدل × 3.333)
+            const percentage = average * 3.333;
 
             // عرض النتائج
             document.getElementById('total').textContent = actualTotal.toFixed(1);
             document.getElementById('average').textContent = average.toFixed(1);
+            document.getElementById('percentage').textContent = percentage.toFixed(1);
 
             // إظهار النتائج
             document.getElementById('results').classList.add('show');
