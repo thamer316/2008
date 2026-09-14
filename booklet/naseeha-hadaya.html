@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موقع النصيحة التعليمي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F6F1E7;
+  --ink: #16202E;
+  --accent: #7A5A2B;
+  --rule: #D9CFB8;
+  --card: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Tajawal', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 780px;
+}
+
+.mark {
+  text-align: center;
+  margin-bottom: 56px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.mark-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--accent);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.mark-line::before,
+.mark-line::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 56px 48px;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent);
+  opacity: 0.55;
+}
+
+.card::before {
+  top: 14px;
+  right: 14px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.card::after {
+  bottom: 14px;
+  left: 14px;
+  border-right: none;
+  border-top: none;
+}
+
+.title {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  font-size: clamp(22px, 3.4vw, 30px);
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 36px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 560px) {
+  .card { padding: 40px 24px; }
+  .mark { margin-bottom: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="mark">
+    <span class="mark-line">موقع النصيحة التعليمي</span>
+  </div>
+
+  <article class="card">
+    <h2 class="title">
+      إهداء شرح الوحدة الأولى مجاناً — الكيمياء
+    </h2>
+    <a class="btn" href="https://naseehamath.com/show-lesson/655" target="_blank" rel="noopener">
+      انتقل إلى الشرح
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+  </article>
+
+  <article class="card">
+    <h2 class="title">
+      إهداء منحة شرح المادة كاملة مجاناً — الأحياء
+    </h2>
+    <a class="btn" href="https://naseehamath.com/course-show/42" target="_blank" rel="noopener">
+      انتقل إلى المنحة
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </a>
+  </article>
+
+</div>
+
+</body>
+</html>
