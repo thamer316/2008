@@ -147,7 +147,7 @@
     #diameter { stroke: var(--ink); stroke-width: 2.2; }
 
     /* touch hint */
-    #hint { pointer-events: none; }
+    #hintPos, #hint { pointer-events: none; }
     #hint circle { fill: rgba(23, 60, 52, 0.18); stroke: var(--ink); stroke-width: 1.5; }
     #hint .ring { fill: none; stroke: var(--ink); stroke-width: 1.5; opacity: .6; transform-origin: center; transform-box: fill-box; animation: ring 1.6s infinite; }
     @keyframes ring { 0% { transform: scale(.6); opacity: .7; } 100% { transform: scale(1.6); opacity: 0; } }
@@ -302,7 +302,7 @@
         <text id="lblC" x="0" y="0">جـ</text>
         <text id="lblO" x="0" y="0">م</text>
         <text id="lblD" x="0" y="0">د</text>
-        <g id="hint" class="hidden"><circle class="ring" r="14"></circle><circle r="9"></circle></g>
+        <g id="hintPos"><g id="hint" class="hidden"><circle class="ring" r="14"></circle><circle r="9"></circle></g></g>
       </svg>
     </section>
 
@@ -439,7 +439,7 @@
       function fmt(n) { return (Math.round(n * 100) / 100).toString(); }
 
       function render() {
-        svg.className.baseVal = '';
+        svg.setAttribute('class', 'sim');
         for (let i = 0; i <= step; i++) svg.classList.add('done-' + i);
         svg.classList.add('step-' + step);
 
@@ -471,7 +471,7 @@
 
       function updateHint() {
         const { px, py } = geom();
-        hint.className.baseVal = '';
+        hint.setAttribute('class', '');
         hint.style.removeProperty('--hx');
         hint.style.removeProperty('--hy');
         if (step === 0) { setHint(0, 55, 0, 60, true); }
@@ -483,7 +483,7 @@
       }
 
       function setHint(x, y, dx, dy, drag) {
-        hint.setAttribute('transform', `translate(${x} ${y})`);
+        el('hintPos').setAttribute('transform', `translate(${x} ${y})`);
         hint.style.setProperty('--hx', dx + 'px');
         hint.style.setProperty('--hy', dy + 'px');
         if (drag) hint.classList.add('drag');
