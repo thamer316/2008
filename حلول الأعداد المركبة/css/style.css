@@ -116,3 +116,60 @@ main{max-width:960px;margin:0 auto;padding:18px 24px 40px}
   .katex{font-size:1em}
   #answers{break-before:page}
 }
+
+/* ---------- unit pages ---------- */
+.pages{max-width:960px;margin:0 auto;padding:0 24px 10px;display:flex;flex-wrap:wrap;gap:6px}
+.pages a{font-size:14.5px;color:var(--navy);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:3px 12px;background:#fff}
+.pages a.cur{background:var(--navy);color:#fff;border-color:var(--navy)}
+.toc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 26px}
+.toc-part h3{margin:6px 0 4px;font-size:17px}
+.toc-part h3 a{color:var(--navy);text-decoration:none}
+.toc-part ol{columns:1;padding:0 16px 0 0;margin:0}
+.part{margin-top:8px}
+.part-h{font-size:25px;color:var(--navy);margin:26px 0 4px;padding:8px 14px;background:#fff;border:1px solid var(--line);border-radius:8px}
+.part-note{color:var(--muted);margin:2px 4px 12px;font-size:15px}
+.method{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 22px 16px;margin-bottom:18px}
+.method h2{margin:0 0 8px;font-size:21px;color:var(--navy)}
+.mtable{border-collapse:collapse;width:100%;font-size:15.5px}
+.mtable th,.mtable td{border:1px solid var(--line);padding:6px 10px;vertical-align:top;text-align:right}
+.mtable th{background:var(--soft);color:var(--navy)}
+.mtable td:first-child{font-weight:700;white-space:nowrap;width:1%}
+.answers.mini{width:auto;margin:6px 0}
+.answers.mini td,.answers.mini th{text-align:center;min-width:80px}
+.ex-head .num:empty{display:none}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px;color:var(--ink);text-decoration:none}
+.card:hover{border-color:var(--navy)}
+.card h2{margin:0;font-size:20px;color:var(--navy)}
+.card-src{font-size:13.5px;color:var(--muted);margin:2px 0 6px}
+.card p{margin:0;font-size:15.5px}
+.intro p{margin:4px 0 10px}
+@media screen and (max-width:760px){
+  .toc-grid,.cards{grid-template-columns:1fr}
+  .mtable td:first-child{white-space:normal}
+  .pages{padding:0 14px 10px}
+}
+@media print{
+  .pages{display:none}
+  .part{break-before:page}
+  .part:first-of-type{break-before:auto}
+  .ans-sec{break-before:page}
+  .method{border:none;padding:0}
+  .part-h{border:none;padding:0;margin-top:0}
+}
+.toc .rng{white-space:nowrap}
+@media print{ .method{break-inside:avoid} }
+.divtab{border-collapse:collapse;margin:8px 0 10px}
+.divtab td{border:1px solid #9aa6b5;padding:4px 14px;text-align:center;min-width:56px}
+.divtab .dt-x{background:#fff;font-weight:700}
+.divtab .dt-q{background:#e6f2e9}
+.divtab .dt-d{background:#e3eef9}
+.divtab .dt-p{border-style:dashed}
+.divtab .dt-r{background:#fbe5e5;border-style:dashed}
+.divtab .dt-blank{border:none}
+@media print{ .figs{width:64mm} }
+/* let the figure drop below the steps when a step table is too wide */
+.ex-body{flex-wrap:wrap}
+.sol{flex:1 1 0;min-width:auto}
+@media screen and (max-width:760px){ .sol{min-width:0} }
+@media print{ .part-h,.part-note{break-after:avoid} }
