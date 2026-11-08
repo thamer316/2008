@@ -1,0 +1,118 @@
+/* حلول أتدرّب وأحلّ المسائل – الأعداد المركّبة */
+:root{
+  --ink:#1d2430;
+  --muted:#5b6472;
+  --navy:#1f3a5f;
+  --reason:#2c6aa8;
+  --line:#d5dbe3;
+  --soft:#f6f8fb;
+  --final-bg:#f1f5fa;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#eef1f5;color:var(--ink);
+  font-family:"Tajawal",system-ui,sans-serif;font-size:17px;line-height:1.85;
+}
+.katex{font-size:1.06em;direction:ltr;unicode-bidi:isolate}
+
+/* ---------- header ---------- */
+.top{background:#fff;border-bottom:1px solid var(--line)}
+.top-in{max-width:960px;margin:0 auto;padding:22px 24px 18px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.kicker{color:var(--muted);font-size:14px}
+h1{margin:2px 0 0;font-size:30px;font-weight:800;color:var(--navy)}
+h1 .en{font-size:17px;font-weight:500;color:var(--muted);margin-inline-start:8px}
+.sub{font-size:16px;color:var(--ink)}
+.author{font-size:13.5px;color:var(--muted);text-align:left;white-space:nowrap}
+
+main{max-width:960px;margin:0 auto;padding:18px 24px 40px}
+
+/* ---------- table of contents ---------- */
+.toc{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 22px 10px;margin-bottom:18px}
+.toc h2{margin:0 0 6px;font-size:19px;color:var(--navy)}
+.toc ol{margin:0;padding:0 18px 0 0;columns:2;column-gap:36px}
+.toc li{break-inside:avoid}
+.toc a{display:flex;justify-content:space-between;gap:10px;color:var(--ink);text-decoration:none;padding:2px 0;border-bottom:1px dotted var(--line)}
+.toc a:hover{color:var(--reason)}
+.toc .rng{color:var(--muted);font-size:14px;direction:ltr}
+.howto{margin:10px 0 4px;font-size:14.5px;color:var(--muted)}
+
+/* ---------- sections ---------- */
+.sec{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px 22px 8px;margin-bottom:18px}
+.sec h2{margin:0 0 4px;font-size:21px;color:var(--navy);padding-bottom:6px;border-bottom:1px solid var(--line)}
+.sec h2 .rng{font-size:15px;color:var(--muted);font-weight:500}
+.stem{font-weight:700;margin:10px 0 6px}
+.given{margin:6px 0;color:var(--ink)}
+
+/* ---------- exercise ---------- */
+.ex{border-top:1px solid var(--line);padding:12px 0 10px;break-inside:avoid;page-break-inside:avoid}
+.stem + .ex,.given + .ex,h2 + .ex{border-top:none}
+.ex-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.num{
+  flex:none;min-width:30px;height:30px;padding:0 6px;border-radius:15px;
+  border:1px solid var(--navy);color:var(--navy);font-weight:700;font-size:15px;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.q{font-weight:700}
+.qt{font-weight:500}
+.ex-body{display:flex;gap:18px;align-items:flex-start}
+.sol{flex:1;min-width:0}
+.figs{flex:none;width:300px}
+.fig{margin:4px 0;border:1px solid var(--line);border-radius:6px;padding:4px;background:#fff}
+.fig img{display:block;width:100%;height:auto}
+.fig.wide{max-width:380px;margin:8px auto 12px}
+
+/* solution steps: left = math, right = reason (as in the textbook) */
+.steps{border-collapse:collapse;width:auto;max-width:100%;margin:2px 0 4px}
+.steps td{padding:3px 6px;vertical-align:middle}
+.steps .lhs{text-align:right;white-space:nowrap;width:1%}
+.steps .rhs{text-align:left;white-space:nowrap}
+.steps .why{text-align:right;color:var(--reason);font-size:15px;line-height:1.6;padding-left:40px;min-width:150px}
+.steps .why .katex{color:var(--reason)}
+
+.txt{margin:4px 0}
+.step{margin:8px 0 2px;font-weight:700;color:var(--navy)}
+.final{
+  margin:6px 0 4px;padding:6px 12px;background:var(--final-bg);
+  border:1px solid var(--line);border-radius:6px;font-weight:700;display:inline-block;
+}
+.note{margin:8px 0 2px;padding:6px 12px;background:var(--soft);border:1px solid var(--line);border-radius:6px;font-size:15.5px}
+.note-h{font-weight:700;color:#8a3b12;margin-inline-end:4px}
+
+/* ---------- answers ---------- */
+.ans-wrap{padding:10px 0 12px;overflow-x:auto}
+.answers tr{break-inside:avoid}
+.stem,.given{break-after:avoid;page-break-after:avoid}
+.answers{border-collapse:collapse;width:100%;font-size:15.5px}
+.answers th,.answers td{border:1px solid var(--line);padding:4px 10px}
+.answers th{background:var(--soft);color:var(--navy)}
+.answers td.an{text-align:center;width:70px;font-weight:700;color:var(--navy)}
+
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:0 0 24px}
+
+/* ---------- narrow screens ---------- */
+@media screen and (max-width:760px){
+  body{font-size:16px}
+  .top-in,main{padding-left:14px;padding-right:14px}
+  .toc ol{columns:1}
+  .ex-body{flex-direction:column}
+  .figs{width:100%;max-width:340px}
+  .steps .why{padding-left:14px;min-width:120px}
+  .sol{overflow-x:auto}
+}
+
+/* ---------- print (A4) ---------- */
+@page{size:A4;margin:14mm 12mm}
+@media print{
+  body{background:#fff;font-size:12.5pt}
+  .top,.sec,.toc{border:none}
+  .top-in,main{padding:0;max-width:none}
+  .sec{padding:0;margin:0 0 10mm;border-radius:0}
+  .sec h2{break-after:avoid}
+  .toc a{color:var(--ink)}
+  .figs{width:55mm}
+  .ex-body{gap:4mm}
+  .steps .why{font-size:10.5pt;padding-left:5mm;min-width:32mm}
+  .katex{font-size:1em}
+  #answers{break-before:page}
+}

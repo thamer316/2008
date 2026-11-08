@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 260" width="330" height="260" font-family="Cambria Math, Times New Roman, serif" font-size="13">
+<defs>
+<marker id="a1f4e8c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e8c"/></marker>
+<marker id="a2e7d4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker>
+<marker id="a333" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#333"/></marker>
+<marker id="a8a4b12" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a4b12"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<line x1="12" y1="183.01960784313727" x2="318" y2="183.01960784313727" stroke="#333" stroke-width="1.1" marker-end="url(#a333)" marker-start="url(#a333)"/>
+<line x1="232.56944444444446" y1="248" x2="232.56944444444446" y2="12" stroke="#333" stroke-width="1.1" marker-end="url(#a333)" marker-start="url(#a333)"/>
+<text x="314" y="200.01960784313727" text-anchor="end" font-style="italic">Re</text>
+<text x="225.56944444444446" y="22" text-anchor="end" font-style="italic">Im</text>
+<text x="227.56944444444446" y="198.01960784313727" text-anchor="end" font-style="italic">O</text>
+<line x1="251.875" y1="60.66666666666666" x2="251.875" y2="183.01960784313727" stroke="#999" stroke-dasharray="3 3"/>
+<line x1="251.875" y1="60.66666666666666" x2="232.56944444444446" y2="60.66666666666666" stroke="#999" stroke-dasharray="3 3"/>
+<line x1="251.875" y1="179.01960784313727" x2="251.875" y2="187.01960784313727" stroke="#333"/>
+<text x="251.875" y="200.01960784313727" text-anchor="middle">2</text>
+<line x1="228.56944444444446" y1="60.66666666666666" x2="236.56944444444446" y2="60.66666666666666" stroke="#333"/>
+<text x="225.56944444444446" y="64.66666666666666" text-anchor="end">15</text>
+<line x1="232.56944444444446" y1="183.01960784313727" x2="251.875" y2="60.66666666666666" stroke="#1f4e8c" stroke-width="1.8" marker-end="url(#a1f4e8c)"/>
+<circle cx="251.875" cy="60.66666666666666" r="2.8" fill="#1f4e8c"/>
+<text x="251.875" y="51.66666666666666" text-anchor="middle" fill="#1f4e8c" font-style="italic">z = 2 + 15i</text>
+<line x1="228.56944444444446" y1="101.45098039215688" x2="236.56944444444446" y2="101.45098039215688" stroke="#333"/>
+<text x="225.56944444444446" y="105.45098039215688" text-anchor="end">10</text>
+<line x1="232.56944444444446" y1="183.01960784313727" x2="232.56944444444446" y2="101.45098039215688" stroke="#2e7d4f" stroke-width="1.8" marker-end="url(#a2e7d4f)"/>
+<circle cx="232.56944444444446" cy="101.45098039215688" r="2.8" fill="#2e7d4f"/>
+<text x="241.56944444444446" y="105.45098039215688" fill="#2e7d4f" font-style="italic">z = 10i</text>
+<line x1="78.125" y1="199.33333333333334" x2="78.125" y2="183.01960784313727" stroke="#999" stroke-dasharray="3 3"/>
+<line x1="78.125" y1="199.33333333333334" x2="232.56944444444446" y2="199.33333333333334" stroke="#999" stroke-dasharray="3 3"/>
+<line x1="78.125" y1="179.01960784313727" x2="78.125" y2="187.01960784313727" stroke="#333"/>
+<text x="78.125" y="175.01960784313727" text-anchor="middle">−16</text>
+<line x1="228.56944444444446" y1="199.33333333333334" x2="236.56944444444446" y2="199.33333333333334" stroke="#333"/>
+<text x="239.56944444444446" y="203.33333333333334" text-anchor="start">−2</text>
+<line x1="232.56944444444446" y1="183.01960784313727" x2="78.125" y2="199.33333333333334" stroke="#8a4b12" stroke-width="1.8" marker-end="url(#a8a4b12)"/>
+<circle cx="78.125" cy="199.33333333333334" r="2.8" fill="#8a4b12"/>
+<text x="78.125" y="217.33333333333334" text-anchor="middle" fill="#8a4b12" font-style="italic">z = −16 − 2i</text>
+</svg>
