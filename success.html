@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c34">
+  <title>تجربة ناجحة</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #173c34;
+      --paper: #f5f1e8;
+      --card: #fffdf7;
+      --accent: #c86b3c;
+      --muted: #65736e;
+      --line: #d8d5ca;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, transparent 49.8%, rgba(23, 60, 52, 0.05) 50%, transparent 50.2%),
+        var(--paper);
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    main {
+      position: relative;
+      width: min(680px, 100%);
+      padding: clamp(42px, 9vw, 82px) clamp(28px, 8vw, 72px);
+      text-align: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      animation: arrive 700ms ease-out both;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      pointer-events: none;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+
+    .mark {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 28px;
+      display: grid;
+      place-items: center;
+      color: var(--card);
+      background: var(--ink);
+      border-radius: 50%;
+      font-size: 38px;
+      font-weight: 700;
+      animation: pop 500ms 350ms cubic-bezier(.2, .8, .2, 1.3) both;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 9vw, 5.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      max-width: 430px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      line-height: 1.9;
+    }
+
+    strong {
+      color: var(--accent);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 34px;
+      padding: 9px 15px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      from { opacity: 0; transform: scale(0.5) rotate(-12deg); }
+      to { opacity: 1; transform: scale(1) rotate(0); }
+    }
+
+    @keyframes pulse {
+      50% { opacity: 0.35; transform: scale(0.8); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">✓</div>
+    <h1>تجربة <strong>ناجحة</strong></h1>
+    <p>تم إنشاء هذه الصفحة وبرمجتها في السحابة، ويمكنك الآن مشاهدتها من هاتفك.</p>
+    <div class="status">
+      <span class="dot" aria-hidden="true"></span>
+      الصفحة تعمل بنجاح
+    </div>
+  </main>
+</body>
+</html>
